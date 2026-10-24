@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 128 128">
+<title>Xiaoma Asset Library · Horse preview card and folder</title>
+<defs>
+  <linearGradient id="tile" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#263E58"/><stop offset="1" stop-color="#101D30"/></linearGradient>
+  <linearGradient id="folder-back" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#299FCC"/><stop offset="1" stop-color="#176592"/></linearGradient>
+  <linearGradient id="folder-front" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#57D7F1"/><stop offset=".45" stop-color="#27B5E7"/><stop offset="1" stop-color="#1686CB"/></linearGradient>
+  <linearGradient id="portrait" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#3183A0"/><stop offset="1" stop-color="#174C69"/></linearGradient>
+  <linearGradient id="horse" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFF9ED"/><stop offset="1" stop-color="#E7D5AF"/></linearGradient>
+  <linearGradient id="land" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#CDEDE6"/><stop offset="1" stop-color="#89C9B8"/></linearGradient>
+  <filter id="card-shadow" x="-30%" y="-30%" width="160%" height="180%"><feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#061D32" flood-opacity=".3"/></filter>
+</defs>
+<rect x="4" y="4" width="120" height="120" rx="26" fill="url(#tile)"/>
+<rect x="4.5" y="4.5" width="119" height="119" rx="25.5" fill="none" stroke="#688398" stroke-opacity=".22"/>
+<path id="asset-folder" d="M18 51Q18 43 26 43H47Q51 43 54 48L59 54H104Q112 54 112 63V99Q112 110 101 110H27Q18 110 18 99Z" fill="url(#folder-back)"/>
+<g id="secondary-preview-card" transform="rotate(-12 48 60)" filter="url(#card-shadow)">
+  <rect x="27" y="30" width="44" height="61" rx="5" fill="#F7FBF7"/>
+  <rect x="31" y="35" width="36" height="47" rx="3" fill="url(#land)"/>
+  <circle cx="41" cy="45" r="4" fill="#E6C787"/>
+  <path d="M31 69L42 53L53 67L60 59L67 70V82H31Z" fill="#4D9B8A"/>
+  <path d="M31 77L48 63L67 77V82H31Z" fill="#397E73"/>
+</g>
+<g id="horse-preview-card" filter="url(#card-shadow)">
+  <rect x="47" y="18" width="59" height="77" rx="7" fill="#FFFDF8"/>
+  <rect x="52" y="23" width="49" height="66" rx="4" fill="url(#portrait)"/>
+  <path id="horse-portrait" d="M58 86C62 76 62 69 58 63C53 55 56 46 63 40L62 29Q67 30 70 36L73 30L76 40Q81 42 84 48L94 60Q97 63 93 67L88 69Q85 70 79 64C75 70 74 79 78 86Z" fill="url(#horse)"/>
+  <path id="mane-detail" d="M62 40C56 48 54 57 59 65C62 71 61 78 58 86H63C67 76 67 68 63 63C59 57 59 49 65 43Z" fill="#D1B989"/>
+  <path id="ear-detail" d="M64 32L65 40L68 37Z" fill="#C6AE80"/>
+  <circle id="eye-detail" cx="80.5" cy="48.5" r="1.35" fill="#243A49"/>
+  <path id="nose-detail" d="M89.5 65L91.5 63.5" fill="none" stroke="#B29C77" stroke-width="1.4" stroke-linecap="round"/>
+</g>
+<path d="M25 76H106Q115 76 113 85L108 106Q107 113 99 113H26Q19 113 18 106L14 86Q12 76 25 76Z" fill="#071F37" opacity=".3" transform="translate(0 2)"/>
+<path d="M25 75H106Q115 75 113 84L108 105Q107 112 99 112H26Q19 112 18 105L14 85Q12 75 25 75Z" fill="url(#folder-front)"/>
+<path d="M24 77H105Q110 77 111 81" fill="none" stroke="#B8F3FA" stroke-opacity=".75" stroke-width="1.4" stroke-linecap="round"/>
+<path d="M25 108H98" fill="none" stroke="#096AA9" stroke-opacity=".35" stroke-width="1.2" stroke-linecap="round"/>
+</svg>

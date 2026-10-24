@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 32 32">
+<title>Xiaoma Asset Library · Layered panels form a horse</title>
+<rect x="1" y="1" width="30" height="30" rx="6" fill="#111111"/>
+  <defs><mask id="collection-cuts" x="0" y="0" width="32" height="32" maskUnits="userSpaceOnUse"><rect width="32" height="32" fill="#FFFFFF"/><path id="material-cuts" d="M7.8 14.7H18.2M7.8 17.1H17.4" fill="none" stroke="#000000" stroke-width="1.2" stroke-linecap="round"/><circle id="eye-cut" cx="24" cy="10.7" r=".6" fill="#000000"/></mask></defs>
+  <g id="horse-collection" mask="url(#collection-cuts)"><path d="M9.4 12.2H17.3L20.6 5.5L21.8 8.2L23.1 7.2L24 9.8L28 12L26.3 14.4L23.4 13.2L22 19.2L20.4 26.2H17.8L18.9 19.6H12L10.9 26.2H8.2L9.1 19.1C6.6 19.1 5.4 17.8 5.4 15.7C5.4 13.7 6.9 12.2 9.4 12.2Z" fill="#FFFFFF"/><path d="M6.6 14.2C3.3 13.4 3.2 17 3.5 19" fill="none" stroke="#FFFFFF" stroke-width="1.7" stroke-linecap="round"/></g>
+</svg>

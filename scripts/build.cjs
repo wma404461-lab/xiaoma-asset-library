@@ -1,0 +1,13 @@
+const fs=require('node:fs/promises'),path=require('node:path');
+const root=path.resolve(__dirname,'..'),esbuild=require('esbuild');
+(async()=>{const output=path.join(root,'build');await fs.mkdir(output,{recursive:true});
+await esbuild.build({entryPoints:[path.join(root,'src/renderer.js'),path.join(root,'src/thumbnail.js')],outdir:output,bundle:true,format:'esm',splitting:true,platform:'browser',target:'chrome145',logLevel:'info'});
+const three=path.resolve(path.dirname(require.resolve('three')),'..');
+await fs.cp(path.join(three,'examples/jsm/libs/draco/gltf'),path.join(output,'decoders/draco'),{recursive:true});
+await fs.cp(path.join(three,'examples/jsm/libs/basis'),path.join(output,'decoders/basis'),{recursive:true});
+const ffmpeg=require('ffmpeg-static');await fs.mkdir(path.join(output,'encoder'),{recursive:true});
+await fs.copyFile(ffmpeg,path.join(output,'encoder/ffmpeg.exe'));
+for(const suffix of ['LICENSE','README'])await fs.copyFile(ffmpeg+'.'+suffix,path.join(output,'encoder/FFmpeg.'+suffix+'.txt'));
+const run=require('node:util').promisify(require('node:child_process').execFile);
+await run(path.join(process.env.WINDIR,'Microsoft.NET/Framework64/v4.0.30319/csc.exe'),['/nologo','/target:exe','/reference:System.Drawing.dll','/out:'+path.join(output,'ShellThumbnail.exe'),path.join(root,'src/ShellThumbnail.cs')],{windowsHide:true});
+})().catch(e=>{console.error(e);process.exitCode=1;});

@@ -1,0 +1,4 @@
+const {parentPort,workerData}=require('node:worker_threads');const {Library}=require('./library.cjs');
+const library=new Library(workerData.database);
+parentPort.on('message',async({request,method,args=[]})=>{try{let value;if(method==='cancel'){library.cancelled=true;value=true;}else if(method==='importFolder')value=await library.importFolder(args[0],progress=>parentPort.postMessage({event:'index-progress',progress}));else if(['statistics','query','asset','update','pairedImage','relatedImage','thumbRecord','thumbAsset','thumbSave','thumbNext','thumbWork','thumbStats','thumbBatchSave'].includes(method))value=library[method](...args);else throw new Error('Operation invalid');parentPort.postMessage({request,value});}catch(error){parentPort.postMessage({request,error:error.message});}});
+parentPort.postMessage({event:'ready'});
